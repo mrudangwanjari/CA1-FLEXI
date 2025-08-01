@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layout Example</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas: 
+        "navbar navbar"
+        "sidebar main"
+        "sidebar box1"
+        "sidebar box2"
+        "footer footer";
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: auto 1fr auto auto auto;
+      gap: 10px;
+      height: 100vh;
+      padding: 10px;
+    }
+
+    .navbar {
+      grid-area: navbar;
+      background-color: #3D8D7A;
+      color: white;
+      border: 2px solid black;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background-color: #799EFF;
+      color: white;
+      border: 2px solid black;
+      padding: 10px;
+    }
+
+    .main {
+      grid-area: main;
+      background-color: #67AE6E;
+      color: white;
+      border: 2px solid black;
+      padding: 10px;
+    }
+
+    .box1 {
+      grid-area: box1;
+      background-color: #FFD700;
+      color: white;
+      border: 2px solid black;
+      padding: 10px;
+    }
+
+    .box2 {
+      grid-area: box2;
+      background-color: #16FF00;
+      color: white;
+      border: 2px solid black;
+      padding: 10px;
+    }
+
+    .footer {
+      grid-area: footer;
+      background-color: black;
+      color: white;
+      border: 2px solid black;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="navbar">Navbar</header>
+    <aside class="sidebar">Sidebar</aside>
+    <main class="main">Main</main>
+    <div class="box1">Box1</div>
+    <div class="box2">Box2</div>
+    <footer class="footer">Footer</footer>
+  </div>
+</body>
+</html>
+
+
+
